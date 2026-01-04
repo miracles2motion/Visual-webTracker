@@ -1,0 +1,10 @@
+{
+  "name": "visual-tracker",
+  "version": "1.0.0",
+  "scripts": {
+    "start": "node index.js"
+  },
+  "dependencies": {
+    "puppeteer": "^21.0.0"
+  }
+}
