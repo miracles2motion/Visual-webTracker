@@ -18,7 +18,7 @@ const path = require('path');
   const page = await browser.newPage();
   await page.setViewport({ width: 1280, height: 800 }); // Standard laptop size
 
-  const url = 'https://www.google.com'; 
+  const url = 'https://github.com/miracles2motion'; 
   console.log(`📸 Capturing ${url}...`);
 
   try {
