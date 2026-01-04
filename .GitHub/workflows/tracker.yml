@@ -1,0 +1,35 @@
+name: Manual Screenshot Bot
+
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  take-screenshot:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v3
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: '18'
+
+      - name: Install Dependencies
+        run: npm install
+
+      - name: Run Screenshot Script
+        run: node index.js
+
+      - name: Commit and Push Image
+        run: |
+          git config --global user.name 'Screenshot Bot'
+          git config --global user.email 'bot@noreply.github.com'
+          git add screenshots/*
+          git commit -m "📸 New manual screenshot captured" || echo "No changes to commit"
+          git push
+          
