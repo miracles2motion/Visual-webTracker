@@ -18,7 +18,7 @@ const path = require('path');
   const page = await browser.newPage();
   await page.setViewport({ width: 1280, height: 800 }); // Standard laptop size
 
-  const url = 'https://www.linkedin.com/in/aigbomian-miracle-2050ba212'; 
+  const url = 'https://startselect.com/fr-en'; 
   console.log(`📸 Capturing ${url}...`);
 
   try {
